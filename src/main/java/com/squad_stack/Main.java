@@ -48,13 +48,13 @@ public class Main {
                             new InsertVehicleRequest(words.get(1), Integer.parseInt(words.get(3))));
                     break;
                 case "Slot_numbers_for_driver_of_age":
-                    output = slotService.getSlotOfVehicle(Integer.parseInt(words.get(1)))
+                    output = slotService.getSlotOfVehicleByDriverAge(Integer.parseInt(words.get(1)))
                                     .stream()
                             .map(String::valueOf)
                             .collect(Collectors.joining(","));
                     break;
                 case "Slot_number_for_car_with_number":
-                    output = String.valueOf(slotService.getSlotOfVehicleNumber(words.get(1)));
+                    output = String.valueOf(slotService.getSlotOfVehicleByNumber(words.get(1)));
                     break;
                 case "Leave":
                     output = parkingService.leaveParking(new LeaveVehicleDto(Integer.parseInt(words.get(1))));

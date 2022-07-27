@@ -6,8 +6,8 @@ import java.util.List;
 
 public interface SlotService {
     String createSlot(CreateSlotRequest createSlotRequest);
-    List<Integer> getSlotOfVehicle (int age);
-    int getSlotOfVehicleNumber(String vehicleNumber);
+    List<Integer> getSlotOfVehicleByDriverAge(int age);
+    int getSlotOfVehicleByNumber(String vehicleNumber);
 
     String getVehicleRegistrationByAge(int age);
 }

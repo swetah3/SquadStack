@@ -22,12 +22,12 @@ public class SlotServiceImpl implements SlotService {
     }
 
     @Override
-    public List<Integer> getSlotOfVehicle(int age) {
+    public List<Integer> getSlotOfVehicleByDriverAge(int age) {
         return parkingSlotRepository.getSlotOfVehicle(age);
     }
 
     @Override
-    public int getSlotOfVehicleNumber(String vehicleNumber) {
+    public int getSlotOfVehicleByNumber(String vehicleNumber) {
         return parkingSlotRepository.getSlotOfVehicleNumber(vehicleNumber);
     }
 
